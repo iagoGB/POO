@@ -1,4 +1,4 @@
-package lista04;
+package Lista04;
 
 import java.util.ArrayList;
 
