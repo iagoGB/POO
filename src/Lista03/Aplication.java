@@ -9,13 +9,13 @@ public class Aplication {
 		
 		ContaBancaria minhaConta = new ContaBancaria("Iago",7,220,0,minhaOperacao);
 		System.out.println(minhaConta.toString());
-		
+		/*
 		Operacao op01 = new Operacao('d',120.50f);
 		Operacao op02 = new Operacao('s',12);
 		minhaConta.adicionaOperacao(op01);
-		minhaConta.adicionaOperacao(op02);
+		minhaConta.adicionaOperacao(op02); 
 	
-		System.out.println(minhaConta.toString());
+		System.out.println(minhaConta.toString()); */
 		
 		/* Questão 2 -
 		 	crie um método main que é capaz de instanciar uma conta com saldo de R$100,00. 
@@ -26,7 +26,7 @@ public class Aplication {
 		*/
 		ArrayList<Operacao> outraLista = new ArrayList<Operacao>();
 		ContaBancaria outraConta = new ContaBancaria("Dono",120,18,100,outraLista);
-		
+		/*
 		Operacao dep01 = new Operacao('d',50f);
 		Operacao dep02 = new Operacao('d',200f);
 		Operacao dep03 = new Operacao('d',1f);
@@ -44,7 +44,7 @@ public class Aplication {
 		System.out.println(outraConta.toString());
 		outraConta.listaOperacao(4);
 
-		
+		*/
 
 		
 		

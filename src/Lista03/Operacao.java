@@ -1,25 +1,23 @@
 package Lista03;
-
+//original
 public class Operacao {
-	private char tipoOperacao;
-	private float valorOperacao;
+	protected float valorOperacao;
 	
     // Questão 1-b. Realizar operações básicas de saque e depósito.
 	// Questão 1-c Retornar o extrato
 	
-	public Operacao(char tipo, float valor) {
-		setTipoOperacao(tipo);
+	public Operacao( float valor) {
 		setValorOperacao(valor);
 	}
 	
-	public void setTipoOperacao(char tipoOp) {
-		this.tipoOperacao = tipoOp;
-	}
 	
-	public char getTipoOperacao() {
-		return this.tipoOperacao;
+	@Override
+	public String toString() {
+		return "Operacao [valorOperacao=" + valorOperacao + "]";
 	}
-	
+
+
+
 	public void setValorOperacao(float v) {
 		this.valorOperacao = v;
 	}
@@ -28,8 +26,5 @@ public class Operacao {
 		return this.valorOperacao;
 	}
 	
-	@Override
-	public String toString() {
-		return "Operacao [Tipo de Operação = " + tipoOperacao + ", valor da Operacão = " + valorOperacao + "]";
-	}
+	
 }

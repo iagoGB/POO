@@ -2,12 +2,16 @@ package Lista03;
 
 import java.util.List;
 
+import Lista09.Saque;
+import Lista09.Transferencia;
+
+
 public class ContaBancaria {
-	private String nome;
-	private int numeroConta;
-	private int numAgencia;
-	private float saldo;
-	private List<Operacao> listaOperacao;
+	protected String nome;
+	protected int numeroConta;
+	protected int numAgencia;
+	protected float saldo;
+	protected List<Operacao> listaOperacao;
 	
 	// Questão 1-a. Guardar e retornar o número da conta.
 
@@ -58,8 +62,8 @@ public class ContaBancaria {
 
 	@Override
 	public String toString() {
-		return "ContaBancaria [Nome = " + nome + ", Numero da Conta = " + numeroConta + ", numero da Agencia = " + numAgencia
-				+ ", saldo = " + saldo + ", lista de Operações = " + listaOperacao + "]";
+		return "ContaBancaria [nome=" + nome + ", numeroConta=" + numeroConta + ", numAgencia=" + numAgencia
+				+ ", saldo=" + saldo + ", listaOperacao=" + listaOperacao + "]";
 	}
 
 	public void setListaOperacao(List<Operacao> listaOperacao) {
@@ -69,21 +73,28 @@ public class ContaBancaria {
 	//e. Verificar se os valores para saque e depósito são positivos e válidos para essas operações
 
 	
-	public void adicionaOperacao(Operacao op) {
-		
-		if (((op.getTipoOperacao() !='d') && (op.getTipoOperacao() !='s')) || (op.getValorOperacao() < 0)){
-			System.out.println("Valor ou tipo de operação inválida");
-		} else if (op.getTipoOperacao() == 'd') {
-			setSaldo(getSaldo()+op.getValorOperacao());
-			getListaOperacao().add(op);
-			System.out.println("Operação realizada com sucesso!");
-		} else if ((op.getTipoOperacao() == 's') && (this.getSaldo()>=op.getValorOperacao())){
-			setSaldo(getSaldo()-op.getValorOperacao());
-			getListaOperacao().add(op);
-			System.out.println("Operação realizada com sucesso!");
+	public void sacar(Saque s) {
+		if (s.getValorOperacao() > getSaldo()) {
+			System.out.println("Saldo insuficiente");
 		} else {
-			System.out.println("Saldo insuficiente para saque");
+			setSaldo(getSaldo()-s.getValorOperacao());
+			System.out.println("Sacado!");
+			adicionaOp(s);
 		}
+		
+	}
+	
+	public void depositar (Transferencia t) {
+		if (t.getValorOperacao() <= 0) {
+			System.out.println("Valor negativo");
+		} else {
+			setSaldo(getSaldo()+t.getValorOperacao());
+			getListaOperacao().add(t);
+		}
+	}
+	
+	protected void adicionaOp(Operacao op) {
+		getListaOperacao().add(op);
 	}
 	
 	public void listaOperacao(int valor) {

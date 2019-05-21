@@ -1,12 +1,13 @@
 package Lista08;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
 
-class QuartoTest {
+import org.junit.Test;
+
+public class QuartoTest {
 	
 	@Test
-	void calculaLucroNegativoException() {
+	public void calculaLucroNegativoException() {
 		try {
 			Quarto quartoTeste = new Quarto (1,1,500);
 			quartoTeste.calculaLucro(-20);
@@ -20,7 +21,7 @@ class QuartoTest {
 	}
 	
 	@Test
-	void incrementaReservaTest() {
+	public void incrementaReservaTest() {
 		Quarto quarto01 = new Quarto (2,2,200);
 		quarto01.alugaQuarto();
 		assertFalse(quarto01.isDisponivel());	
