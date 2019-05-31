@@ -1,4 +1,4 @@
-package Lista04;
+package td04;
 
 public class Telefone {
 	private int ddd;

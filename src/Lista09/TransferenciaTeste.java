@@ -13,7 +13,7 @@ public class TransferenciaTeste {
 
 	@Test
 	public void TransferenciaSucessoTest() {
-		ArrayList lOp = new ArrayList<Operacao>();
+		ArrayList<Operacao> lOp = new ArrayList<Operacao>();
 		ContaBancaria cB = new ContaBancaria("Julieta", 2, 99, 500, lOp);
 		Transferencia t = new Transferencia(30, 2, 5);
 		cB.depositar(t);
@@ -22,7 +22,7 @@ public class TransferenciaTeste {
 	
 	@Test
 	public void TransferenciaFracassoTest() {
-		ArrayList lOp = new ArrayList<Operacao>();
+		ArrayList<Operacao> lOp = new ArrayList<Operacao>();
 		ContaBancaria cB = new ContaBancaria("Mario", 2, 99, 55, lOp);
 		Transferencia t = new Transferencia(-5, 2, 5);
 		cB.depositar(t);

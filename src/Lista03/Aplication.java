@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Aplication {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		ArrayList<Operacao> minhaOperacao = new ArrayList<Operacao>();
 		

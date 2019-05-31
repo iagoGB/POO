@@ -31,3 +31,4 @@ factoryConfiguration.json
 ### Eclipse Patch ###
 # Eclipse Core
 .project
+/bin/

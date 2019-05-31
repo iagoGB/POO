@@ -16,7 +16,7 @@ public class SaqueTeste {
 	@Test
 	public void saqueSucessoTeste() {
 		
-		ArrayList lOp = new ArrayList<Operacao>();
+		ArrayList<Operacao> lOp = new ArrayList<Operacao>();
 		ContaBancaria cB = new ContaBancaria("Julieta", 2, 99, 500, lOp);
 		Saque saque = new Saque(200, 2);
 		cB.sacar(saque);
@@ -27,7 +27,7 @@ public class SaqueTeste {
 	@Test
 	public void saqueFracassoTeste() {
 		
-		ArrayList lOp = new ArrayList<Operacao>();
+		ArrayList<Operacao> lOp = new ArrayList<Operacao>();
 		ContaBancaria cB = new ContaBancaria("Junior", 2, 99, 100, lOp);
 		Saque saque = new Saque(200, 2);
 		cB.sacar(saque);
