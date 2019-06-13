@@ -9,7 +9,7 @@ public class ApplicationMenu {
 
 	public static void main(String[] args) {
 		
-		Banco bb = new Banco();
+		Banco bb = new Banco(null);
 		
 		Scanner sc = new Scanner(System.in);
 		/* 
