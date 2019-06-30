@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import Lista10.superclass.ContaBancaria;
 import Lista10.subclass.ContaCorrente;
 import Lista10.subclass.ContaPoupanca;
-import Lista10.util.Relatorio;
 
 public class Application {
 
